@@ -9,8 +9,7 @@ const flexibox = document.getElementById("flexibox");
 
   
     flexibox.style.transform = `scale(${answer})`;
-    //alert(`movement of ${answer}px is made`);
-   
+    
 });
 
 //function myGrow(){
@@ -21,10 +20,17 @@ const flexibox = document.getElementById("flexibox");
 function mouseover(e){
       
 
-          flexibox.innerHTML = `x:${e.clientX}, Y:${e.clientY}`;
-} 
+          flexibox.innerHTML = `x:${e.pageX}, Y:${e.clientY}`;
+
+ console.log(`x:${e.clientX}, Y:${e.clientY}`);
+ console.log(`x:${e.pageX}, Y:${e.pageY}`);
+
+
+}
    flexibox.addEventListener('mousedown',mouseover);
-       document.innerHTMl = e.offsetX + ', ' + e.offsetY;
+
+
+       //document.innerHTMl = e.offsetX + ', ' + e.offsetY;
 
 
 //console.log(`$(flexibox.clientX")`);
